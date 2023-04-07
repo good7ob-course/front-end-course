@@ -45,6 +45,8 @@
 - 今天实现的 [ruanyi.html](ruanyi.html)
 - https://www.zhangxinxu.com/wordpress/2023/03/css-revert-layer-global-keyword/
 - https://gitee.com/ 注册完之后 点击 https://gitee.com/Weibozzz/demo
+  - git clone https://gitee.com/Weibozzz/demo.git
+  - git pull
 ## 重要的
 一定要自己盲写，有问题再去找答案，
 
