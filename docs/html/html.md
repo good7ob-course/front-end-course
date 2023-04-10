@@ -10,6 +10,8 @@
   - a 行标签 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a
     - href
   - span 行标签
+    - 特点，不能设置宽高，但是可以设置margin 和 padding
+  - img 行标签, src alt
 ### 2.1
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ## 3.css
@@ -22,10 +24,19 @@
 - padding
 - border
 - text-align  center,left,right
+- font-weight  bold,normal
+- float left,right，none，必须清除浮动
+- display, block none
+- position
+  - absolute 如果没有设置宽高，会导致元素宽高变成内容撑开,他会根据最近的一个非static 元素来定位
+  - relative 相对定位
+- cursor
 #### 3.1.1
 - style优先级比class优先级高
 ### 3.2 class
 同类的样式适合用class
+- 权重问题
+- 伪类：after,hover
 ## 4.行块区别
 1. 块标签可以设置宽高，行内不可以
 ## 5
@@ -36,6 +47,7 @@
   - margin-top margin-bottom有合并的情况
 - padding
 - border
+- border-radius  写百分比，可以写px,50%为圆,上右下左 来设置。
 - box-sizing 
   - content-box 默认,会计算border和padding
   - border-box 特点：不计算border和padding
@@ -48,6 +60,9 @@
 - 点击fork
   - git clone 
   - git pull
+### 第二天
+- ruanyi.html
+- https://www.zhangxinxu.com/wordpress/page/2/
 ## 重要的
 一定要自己盲写，有问题再去找答案，
 
