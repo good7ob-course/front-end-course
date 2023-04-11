@@ -25,6 +25,7 @@
 - border
 - opacity
 - text-align  center,left,right
+- text-decoration none,
 - font-weight  bold,normal
 - float left,right，none，必须清除浮动
 - display, block none
