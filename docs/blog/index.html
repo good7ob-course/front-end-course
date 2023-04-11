@@ -9,6 +9,8 @@
     }
     .top-banner{
       position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
       /*background-color: gray;*/
     }
     .center{
@@ -42,19 +44,6 @@
     }
     .desc{
       float: right;
-    }
-    .parent{
-      position: relative;
-    }
-    .child{
-    }
-    .child-1{
-      position: absolute;
-      bottom: 0;
-      right: 20px;
-      width: 200px;
-      height: 50px;
-      background-color: aqua;
     }
     .item{
       float: left;
@@ -114,7 +103,7 @@
     class="icon"
     src="https://cdn.zhangxinxu.com/wordpress/wp-content/themes/default/images/index_logo.gif"
     alt="icon">
-  <span class="desc">我的生活和技术文章</span>
+  <span class="desc" style="position: relative;top: 25.5px;transform: translateY(-50%)">我的生活和技术文章</span>
 </div>
 <div class="nav">
   <div class="item">
@@ -154,10 +143,10 @@
 </div>
 <div class="page-area">
   <div class="area-item">
-    <div class="title">关于这本书</div>
+    <div class="article-title">使用AbortController abort中断原生fetch或axios请求</div>
+    <div class="article-desc"></div>
   </div>
 </div>
-
 <br>
 
 <!--<div>定位讲解</div>-->
@@ -172,5 +161,16 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
+
+<div>定位 relative </div>
+<div class="parent" style="background-color: blue">
+  parent
+  <div class="child" style="background-color: red">
+    child
+    <div class="child-1" style="position: relative;top: 10px;background-color: #2f32d8">
+      child-1
+    </div>
+  </div>
+</div>
 </body>
 </html>

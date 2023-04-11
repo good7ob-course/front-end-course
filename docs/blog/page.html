@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <title>page</title>
   <style>
+    .fl{
+      float: left;
+    }
+
+    .clear:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
     body{
       margin: 0;
     }
@@ -107,6 +116,7 @@
       clear: both;
     }
     .page-area{
+      margin-left: 50px;
       padding-top: 20px;
     }
     .article-title{
@@ -121,12 +131,59 @@
       font-size: 12px;
     }
     .article-label{
+      width: 600px;
+      padding: 4px 5px;
+      color: #666;
+      background-color: rgba(0,0,0,.05);
+      font-size: 12px;
+      border-left: 4px solid #ccc;
     }
     .article-desc .comment{
       padding: 0 5px;
       background-color: #888;
       color: #fff;
       border-radius: 3px;
+    }
+    .share-area{
+      width: 60px;
+      margin-left: 8px;
+      text-align: center;
+    }
+    .icon-text{
+      color: #777;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+    .icon-weibo{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      box-shadow: 0px 0px 12px #ccc;
+      background-color: white;
+      background-image: url("../../assets/weibo.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .icon-weibo:hover{
+      background-image: url("../../assets/weibo-active.png");
+    }
+    .nav-area{
+      width: 100px;
+      margin: 0 20px;
+      padding-left: 15px;
+      border-left: 1px solid #ccc;
+    }
+    .anchor-title{
+      margin-top: 5px;
+      color: #242934;
+      font-size: 14px;
+      opacity: .6;
+    }
+    .anchor-title.last{
+      margin-bottom: 5px;
     }
   </style>
 </head>
@@ -163,23 +220,40 @@
     <div class="desc">我的二维码</div>
   </div>
 </div>
-
-<div class="page-area">
-  <div class="article-title">
-    我的第一篇文章
+<div class="page-area clear">
+  <div class="share-area fl">
+    <div class="icon-text">分享</div>
+    <div class="icon-weibo"></div>
+    <div class="icon-weibo"></div>
   </div>
-  <div class="article-desc">
-    这篇文章发布于 2023年01月17日，星期二，23:07，归类于 JS API。 阅读 4498 次, 今日 9 次
-    <span class="comment">8条评论</span>
+  <div class="article-area fl">
+    <div class="article-title ">
+      我的第一篇文章
+    </div>
+    <div class="article-desc">
+      这篇文章发布于 2023年01月17日，星期二，23:07，归类于 JS API。 阅读 4498 次, 今日 9 次
+      <span class="comment">8条评论</span>
+    </div>
+    <div class="article-label">
+      <div>by zhangxinxu from https://www.zhangxinxu.com/wordpress/?p=10694 鑫空间-鑫生活</div>
+      <div>本文欢迎分享与聚合，全文转载就不必了，尊重版权，圈子就这么大，若急用可以联系授权。</div>
+    </div>
   </div>
-  <div class="article-label">
-    本文欢迎分享与聚合，全文转载就不必了，尊重版权，圈子就这么大，若急用可以联系授权。
+  <div class="nav-area fl">
+    <div class="anchor-title">五一快乐</div>
+    <div class="anchor-title">五一快乐</div>
+    <div class="anchor-title last">五一快乐</div>
   </div>
+  <div class="ad-area fl">4</div>
 </div>
 
 <br>
 
 <div style="width: 100px;height: 100px;background-color: red;margin-left: 20px;border-radius: 0 20px">border-radios讲解</div>
 
+<br>
+<div>行块标签之间的转化</div>
+<div style="background-color: #2f32d8;display: inline-block;width: 100px;height: 100px">我是块标签</div>
+<span style="background-color: #2f32d8;width: 100px;height: 100px;display: inline-block">我是块标签</span>
 </body>
 </html>

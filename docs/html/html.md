@@ -11,7 +11,7 @@
     - href
   - span 行标签
     - 特点，不能设置宽高，但是可以设置margin 和 padding
-  - img 行标签, src alt
+  - img 行内块标签, src alt
 ### 2.1
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ## 3.css
@@ -23,14 +23,24 @@
 - margin-bottom
 - padding
 - border
+- opacity
 - text-align  center,left,right
 - font-weight  bold,normal
 - float left,right，none，必须清除浮动
 - display, block none
+  - inline 
+  - inline-block
+  - block
 - position
   - absolute 如果没有设置宽高，会导致元素宽高变成内容撑开,他会根据最近的一个非static 元素来定位
-  - relative 相对定位
+  - relative 相对定位,相对于自己定位
+- transform
+  - translateY translateX translate 相对于本身的一个偏移，可以写百分比，像素px
 - cursor
+- background-image url(''')
+- background-size 100%,cover,contain
+- background-repeat repeat,no-repeat
+- box-shadow x，y,偏移量，颜色
 #### 3.1.1
 - style优先级比class优先级高
 ### 3.2 class
