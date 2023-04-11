@@ -1,0 +1,12 @@
+.fl{
+  float: left;
+}
+
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+body{
+  margin: 0;
+}

@@ -3,120 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>我的第一个博客</title>
-  <style>
-    body{
-      margin: 0;
-    }
-    .top-banner{
-      position: relative;
-      /*background-color: gray;*/
-    }
-    .center{
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 51px;
-      width: 100%;
-      margin: auto;
-    }
-    /*清除浮动*/
-    .top-banner:after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-    .nav:after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-    .nav{
-      border-top: 3px solid #8BA7E3;
-      border-bottom: 2px solid #B4C9F5;
-      background: linear-gradient(to right bottom, #D8E5F7, #BCD3F5);
-    }
-    .icon{
-      float: left;
-    }
-    .desc{
-      float: right;
-    }
-    .parent{
-      position: relative;
-    }
-    .child{
-    }
-    .child-1{
-      position: absolute;
-      bottom: 0;
-      right: 20px;
-      width: 200px;
-      height: 50px;
-      background-color: aqua;
-    }
-    .item{
-      float: left;
-      width: 166px;
-      height: 48px;
-      text-align: center;
-      cursor: pointer;
-    }
-    .item:hover{
-      background-color: white;
-    }
-    .item.active{
-      background: white;
-    }
-    .item .desc{
-      float: none;
-      font-size: 12px;
-    }
-    .item .title{
-      color: #34538b;
-      font-size: 14px;
-    }
-    .item .title:hover{
-      color: #333;
-    }
-    .pagination{
-      padding-top: 30px;
-      padding-left: 10px;
-    }
-    .pagination-item{
-      float: left;
-      padding: 2px 6px;
-      margin: 2px;
-      color: #34538b;
-      border: 1px solid #34538b;
-    }
-    .pagination-item.first{
-      color: #666;
-      border: 1px solid #666;
-    }
-    .pagination-item.current{
-      font-weight: bold;
-      border: 1px solid #666;
-      color: #fff;
-      background-color: #486aaa;
-    }
-    .pagination:after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-  </style>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<div class="top-banner">
+<div class="top-banner clear">
   <img
     class="icon"
     src="https://cdn.zhangxinxu.com/wordpress/wp-content/themes/default/images/index_logo.gif"
     alt="icon">
-  <span class="desc">我的生活和技术文章</span>
+  <span class="desc" style="position: relative;top: 25.5px;transform: translateY(-50%)">我的生活和技术文章</span>
 </div>
-<div class="nav">
+<div class="nav clear">
   <div class="item">
     <div class="title">首页</div>
     <div class="desc">
@@ -154,10 +52,10 @@
 </div>
 <div class="page-area">
   <div class="area-item">
-    <div class="title">关于这本书</div>
+    <a class="article-title" href="page.html">使用AbortController abort中断原生fetch或axios请求</a>
+    <div class="article-desc"></div>
   </div>
 </div>
-
 <br>
 
 <!--<div>定位讲解</div>-->
@@ -172,5 +70,16 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
+
+<div>定位 relative </div>
+<div class="parent" style="background-color: blue">
+  parent
+  <div class="child" style="background-color: red">
+    child
+    <div class="child-1" style="position: relative;top: 10px;background-color: #2f32d8">
+      child-1
+    </div>
+  </div>
+</div>
 </body>
 </html>
