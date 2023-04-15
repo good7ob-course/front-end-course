@@ -13,6 +13,12 @@
   - span 行标签
     - 特点，不能设置宽高，但是可以设置margin 和 padding
   - img 行内块标签, src alt
+  - input value,placeholder
+    - type: button,checkbox,radio,text默认
+  - button ,disabled
+  - select配合option
+  - form
+    - label 和 id 配合可以在内部高亮表单元素
 ### 2.1
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ## 3.css
@@ -49,6 +55,7 @@
 同类的样式适合用class
 - 权重问题
 - 伪类：after,hover
+  - hover hover某个元素，让其他的元素产生作用
 ## 4.行块区别
 1. 块标签可以设置宽高，行内不可以
 ## 5
