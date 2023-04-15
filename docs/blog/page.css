@@ -181,3 +181,21 @@
 .comment-area .comment-item .date:hover{
   text-decoration: underline;
 }
+/*form*/
+.form-area{
+  margin: 30px;
+}
+.form{
+  padding: 20px;
+  border: 1px solid #000;
+}
+.demo-hover-box{
+  display: none;
+  width: 200px;
+  height: 200px;
+  background: #8BA7E3;
+}
+.submit-box .submit:hover{
+  color: red;
+  display: block;
+}
