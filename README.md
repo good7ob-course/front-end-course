@@ -17,5 +17,8 @@
 6. 点击 New pull request
 7. 提交确定即可
 8. 等待审核
+### 拉取代码
+- 进入自己仓库点击 sync fork
+- 点击编辑器右上角的拉取
 ## 资源
 - https://www.iconfont.cn/
