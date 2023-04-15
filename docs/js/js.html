@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <title>学习js</title>
   <style>
+    #test{
+    }
     .btn-group button.active{
       color: red;
+    }
+    button{
+      background-color: green;
+    }
+    .abc{
+      font-size: 23px;
     }
   </style>
 </head>
@@ -13,13 +21,36 @@
 学习js
 <div class="btn-group">
   <button class="active">全部商品</button>
-  <button>测试</button>
-  <button>高达</button>
+  <button id="test" class="abc">测试</button>
+  <button id="test2">高达</button>
 </div>
 <script>
+  // string number boolean
   var name = "由玉溪"
   var sex = '男'
+  var age = 18
+  var age2 = '18'
+  var isWomen = false
   console.log(name+':'+sex)
+  console.log(age)
+  console.log(age2)
+  console.log(isWomen)
+  var str = '我是'+name+ ';年龄' + age +'岁;'
+  console.log(str)
+  console.log(str + '我在学前端')
+  console.log(document.getElementsByClassName('active')[0])
+  console.log(document.getElementsByTagName('button')[1])
+  console.log(document.getElementById('test'))
+
+  var testDom = document.getElementById('test')
+  testDom.onclick=function(){
+    // testDom.className = 'active'
+    // testDom.id = 'active'
+    testDom.classList.toggle('active')
+  }
+  document.getElementById('test2').onclick=function(){
+    document.getElementById('test2').className = 'active'
+  }
 </script>
 </body>
 </html>
