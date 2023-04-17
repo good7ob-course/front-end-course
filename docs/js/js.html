@@ -15,6 +15,21 @@
     .abc{
       font-size: 23px;
     }
+    .product-btn{
+      width: 138px;
+      height: 34px;
+      margin-right: 20px;
+      color: red;
+    }
+    .product-btn:hover{
+      background-color: yellow;
+      color: #333;
+      transition: all 0.3s linear;
+    }
+    .product-btn.active{
+      background-color: yellow;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -22,7 +37,10 @@
 <div class="btn-group">
   <button class="active">全部商品</button>
   <button id="test" class="abc">测试</button>
-  <button id="test2">高达</button>
+  <button>高达</button>
+  <button>高达</button>
+  <button>高达</button>
+  <button>高达</button>
 </div>
 <script>
   // string number boolean
@@ -51,6 +69,107 @@
   document.getElementById('test2').onclick=function(){
     document.getElementById('test2').className = 'active'
   }
+</script>
+<script>
+  var arr = [1, 2, 3,'abc', true, false,['b']]
+  console.log(arr[6])
+  console.log(arr.length)
+  for(var i=0; i<arr.length; i++) {
+    console.log(arr[i])
+  }
+  var obj = {
+    'a': 1,
+    '1': 'a',
+    c: true,
+    d: [0, 1]
+  }
+  console.log(obj)
+</script>
+<script>
+  // 创建dom
+  var btn = document.createElement('button')
+  console.log(btn)
+  btn.className = 'active'
+  btn.innerText = '我是创建的btn'
+  var btns = document.getElementsByTagName('button')
+  var btnsParent = document.getElementsByClassName('btn-group')
+  console.log(btnsParent)
+  btnsParent[0].appendChild(btn)
+  // btnsParent[0].removeChild(btns[0])
+  // btnsParent[0].insertBefore(btn, btns[1])
+</script>
+<script>
+  var div = document.createElement('div')
+  div.className = 'btns btns1'
+  console.log(div)
+  var btnArr = ['测试', '高达', 'a', 'b', 'c']
+  var body = document.getElementsByTagName('body')
+  console.log(body[0])
+  body[0].appendChild(div)
+  for (var i = 0; i < btnArr.length; i++) {
+    var btn = document.createElement('button')
+    if (i == 0) {
+      btn.className = 'product-btn active'
+    } else {
+      btn.className = 'product-btn'
+    }
+    btn.innerText = btnArr[i]
+    btn.onclick=function(){
+      // console.log(1111)
+      // btn.className = 'product-btn active'
+      btn.classList.toggle('active')
+    }
+    div.appendChild(btn)
+  }
+</script>
+<script>
+  // 数组的方法
+  var arr = ['a', 'b', 'c', 'd']
+  var arr2 = ['e', 'f']
+  var arr4 = ['e4', 'f4']
+  var arr3 = arr.concat(arr2, arr4)
+  console.log(arr)
+  console.log(arr2)
+  console.log(arr3)
+  var plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+  console.log(plants.pop());
+  console.log(plants);
+  plants.pop();
+  console.log(plants);
+  var animals = ['pigs', 'goats', 'sheep'];
+  var count = animals.push('cows');
+  console.log(count);
+  console.log(animals);
+  animals.push('chickens', 'cats', 'dogs');
+  console.log(animals);
+
+  var array1 = ['one', 'two', 'three'];
+  console.log('array1:', array1);
+  var reversed = array1.reverse();
+  console.log('reversed:', reversed);
+  console.log('array1:', array1);
+
+  var array2 = [1, 2, 3];
+  var firstElement = array2.shift();
+  console.log(array2);
+  console.log(firstElement);
+
+  var animals2 = ['ant', 'bison', 'camel', 'duck', 'elephant', 1];
+  // console.log(animals2.slice(2));
+  // console.log(animals2.slice(2, 4));
+  console.log(animals2.slice(1, 2));
+  // console.log(animals2.slice(-2));
+  // console.log(animals2.slice(2, -1));
+  console.log(animals2.slice());
+
+  var months = ['Jan', 'March', 'April', 'June'];
+  // months.splice(1, 0, 'Feb');
+  // console.log(months);
+  months.splice(2, 2);
+  console.log(months);
+
+
 </script>
 </body>
 </html>

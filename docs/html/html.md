@@ -49,6 +49,7 @@
 - background-size 100%,cover,contain
 - background-repeat repeat,no-repeat
 - box-shadow x，y,偏移量，颜色
+- transition 属性，动画执行时长，动画延长(如果不加，默认没有)，动画曲线(liner匀速)
 #### 3.1.1
 - style优先级比class优先级高
 - id选择器优先级最高
