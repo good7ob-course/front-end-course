@@ -171,5 +171,152 @@
 
 
 </script>
+<script>
+  function calc(age, name){
+    console.log(arguments)
+    // var name = "由玉溪"
+    var sex = '男'
+    // var age = 18
+    var age2 = '18'
+    var isWomen = false
+    var str = '我是'+name+ ';年龄' + age +'岁;'
+    return str;
+  }
+  console.log(calc(13, '鱿鱼须', 999))
+  console.log(calc(24, 'vue'))
+  function ifS(age){
+    if (age == 12 ) {
+      console.log('你是未成年')
+    } else {
+      console.log('出错了')
+      return ;
+    }
+    if(age == 18) {
+      console.log('你刚成年')
+    }else {
+      console.log('出错了2')
+    }
+    if(age == 60) {
+      console.log('你已经是老年人')
+    }
+  }
+  // ifS(15)
+  function ifElseIf(age){
+    console.log(typeof age)
+    if (typeof age === 'string') {
+      console.log('传入的是字符串')
+      return
+    }
+    if (typeof age === 'number') {
+      console.log('传入的是数字')
+      return
+    }
+    if (typeof age === 'undefined') {
+      console.log('传入的是undefined')
+      return
+    }
+    console.log('其他')
+  }
+  // ifElseIf(1)
+  // ifElseIf('2')
+  // ifElseIf()
+  // ifElseIf([])
+  // ifElseIf({})
+  // ifElseIf(true)
+  function isArr(age){
+    // console.log(age instanceof Array)
+    // console.log(Array.isArray(age))
+    console.log(Object.prototype.toString.call(age))
+  }
+  // isArr(1)
+  // isArr('2')
+  // isArr()
+  // isArr([])
+  // isArr({})
+  // isArr(true)
+  // isArr(calc)
+  // isArr(/q/)
+  // console.log(typeof /q/)
+  function switchS(expr){
+    switch(expr){
+      case '1':
+        console.log('111');
+        break;
+      case 1:
+        console.log('222');
+        break;
+      case 'Oranges':
+      case 'Oranges2':
+      case 'Mangoes':
+      case 'Papayas':
+        console.log('Mangoes and papayas are $2.79 a pound.');
+        break;
+      default:
+        console.log(`Sorry, we are out of ${expr}.`);
+    }
+  }
+  // switchS('22')
+  function whileS(){
+    var n = 0;
+    while (n < 10) {
+      // n++;
+      // n = n + 1
+      // ++n
+      console.log(n++) // 0 1
+      // console.log(++n) // 1 2
+    }
+    console.log(n);
+  }
+  // whileS()
+  function doWhileS(){
+    var i = 0;
+    do {
+      i += 1;
+      // i= i+1
+      // i++
+      console.log(i)
+    } while (i < 0);
+    console.log('执行完成')
+  }
+  // doWhileS()
+  var x = 111
+  var module = {
+    x: 42,
+    a: [1],
+    getX: function(){
+      console.log(this)
+      return this.x;
+    }
+  };
+  var unboundGetX = module.getX;
+  // console.log(unboundGetX()); // The function gets invoked at the global scope
+  // Expected output: undefined
+
+  var boundGetX = unboundGetX.bind({ x: 999 });
+  // console.log(boundGetX());
+  // Expected output: 42
+  var fruits = {
+    color: "red",
+    say: function() {
+      console.log(arguments)
+      // console.log("My color is " + this.color);
+    }
+  }
+  fruits.say();    //My color is red
+  fruits.say.call({color: 'green'}, 1, 2,3);    //My color is red
+  fruits.say.apply({color: 'black'}, [1,2,3]);    //My color is red
+  
+  
+  var w1 = 'w1'
+  function w2Fn() {
+    var w1 = '111'
+    var a = function (){
+      var w1 = '222'
+      console.log(w1)
+    }
+    a()
+  }
+  w2Fn()
+</script>
 </body>
 </html>
