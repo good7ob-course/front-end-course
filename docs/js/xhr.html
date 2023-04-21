@@ -91,5 +91,82 @@
   //   console.log(arr[i], i)
   // }
   console.log(arr2)
+  var arrMap = arr.map(function (item) {
+    console.log(item)
+    return item.a;
+  })
+  var arrMap1 = arr.map(item => {
+    console.log(item)
+    return item.a;
+  })
+  console.log(arrMap1, arr)
+  
+  // var fn = function (a) {
+  //   // console.log('fn')
+  //   return a;
+  // }
+  // var fn=()=>{
+  //   // console.log(123)
+  //   return 'fn';
+  // }
+  // var fn=(b)=> {
+  //   return b;
+  // }
+  // function fn() {
+  //   console.log('fn')
+  // }
+  // console.log(fn(456))
+  var array1 = [1, 4, 9, 16];
+
+  // Pass a function to map
+  var map1 = array1.map(x=>x*2);
+  var map2 = array1.map(x => {
+    return x*2;
+  });
+
+  console.log(map2);
+  var isBelowThreshold = (currentValue) => currentValue < 30;
+  var array1 = [1, 30, 39, 39, 10, 13];
+  var array11 = [1, 10, 39, 29, 10, 13];
+  console.log(array1.every(isBelowThreshold));
+
+  var everyS = array1.every(function (item){
+    return item<30;
+  })
+  var everyS2 = array1.some(item=>{
+    console.log(item)
+    return item===399;
+  })
+  console.log(everyS2)
+  // console.log(array11.indexOf(10))
+  // var elements = ['Fire'];
+  //
+  // console.log(elements.join());
+  // console.log(elements.join('|'));
+  var arraySort = [1, 30, 4, 21, 100000];
+  arraySort.sort((a,b) => {
+    return b-a;
+  });
+  console.log(arraySort);
+  var o1 = {
+    a: '123',
+    b: ['123'],
+    c: true,
+  }
+  console.log(o1)
+  console.log(Object.keys(o1))
+  console.log(Object.values(o1))
+  console.log(Object.entries(o1))
+  Object.keys(o1).forEach(item => {
+    console.log(o1[item])
+  })
+  Object.entries(o1).forEach(item => {
+    console.log(item[0], item[1])
+  })
+  var str = 'kjhouu'
+  console.log(str.length)
+  var p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+  console.log(p.replace('dog', 'monkey'));
+  console.log(p.replaceAll('dog', 'monkey'));
 </script>
 </html>
