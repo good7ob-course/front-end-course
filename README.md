@@ -25,6 +25,6 @@
 ## 启动server
 1. 进入server 文件夹
 2. 执行 npm i -g pnpm
-3. 执行 npm i
+3. 执行 pnpm i
 4. 启动服务 npm start 
 5. 打开 http://localhost:3000

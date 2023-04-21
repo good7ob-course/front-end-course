@@ -28,6 +28,8 @@ var name = '前端'
 - concat 不会更改现有数组，而是返回一个新数组
 - slice() 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括end）。原始数组不会被改变。
 
+- forEach() element,index,,无返回值(undefined)
+
 - pop() 从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度
 - shift() 方法从数组中删除第一个元素，并返回该元素的值。此方法更改数组的长度。
 - unshift() 方法将一个或多个元素添加到数组的开头，并返回该数组的新长度。
@@ -84,3 +86,16 @@ var name = '前端'
 - apply 用于函数和对象
 ## 小知识点
 - ++在前在后的小区别，在前是先赋值在计算，在后是先计算在赋值
+## 3. xhr
+- XMLHttpRequest
+- responseType
+  - JSON.stringify()
+  - JSON.parse()
+### 3.1 跨域
+- 协议 http/https
+- 域名
+- 端口 http(80)/https(443)
+### 3.2 解决跨域
+- nginx
+- node 服务
+- cors header('Access-Control-Allow-Origin', '*')
