@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>xhr</title>
+  <style>
+    body{
+      background-color: #eee;
+    }
+    .btn{
+      width: 150px;
+      height: 34px;
+      margin-right: 12px;
+      color: #999;
+      text-align: center;
+      background-color: #fff;
+      border: none;
+    }
+    .btn.active{
+      color: #333;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+<h2>xhr学习</h2>
+<div id="btn-group" style="margin-bottom: 20px"></div>
+<div id="btn-group2"></div>
+</body>
+<script>
+  function insetDom(obj, id){
+    console.log(obj.data)
+    console.log(typeof obj.data)
+    console.log(obj.data instanceof Array )
+    console.log(Array.isArray(obj.data))
+    console.log(Object.prototype.toString.call(obj.data) === '[object Array]')
+    for (var i = 0; i < obj.data.length; i++) {
+      var btn = document.createElement('button')
+      if (i===obj.data.length-1){
+        btn.className = 'btn active'
+      } else {
+        btn.className = 'btn'
+      }
+      btn.innerText = obj.data[i].name
+      var box = document.getElementById(id)
+      box.appendChild(btn)
+    }
+  }
+  function request(url, id){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+
+    // If specified, responseType must be empty string or "text"
+    xhr.responseType = 'text';
+    // xhr.responseType = 'json';
+
+    xhr.onload = function () {
+      if (xhr.readyState === xhr.DONE) { // 4
+        if (xhr.status === 200) {
+          var obj = JSON.parse(xhr.response)
+          if (obj.code === 1) {
+            insetDom(obj, id)
+          }
+        }
+      }
+    };
+    xhr.send(null);
+  }
+  // request('http://localhost:3000/categoryList', 'btn-group')
+  // request('http://localhost:3000/priceList', 'btn-group2')
+  
+  var arr = [
+    {
+      a: 1,
+      b: '2'
+    },
+    {
+      a: 11,
+      b: '22'
+    },
+    {
+      a: 111,
+      b: '222'
+    }
+  ]
+  console.log(arr)
+  var arr2 = arr.forEach(function(item, i){
+    console.log(item, i)
+  })
+  // for (var i = 0; i < arr.length; i++) {
+  //   console.log(arr[i], i)
+  // }
+  console.log(arr2)
+  var arrMap = arr.map(function (item) {
+    console.log(item)
+    return item.a;
+  })
+  var arrMap1 = arr.map(item => {
+    console.log(item)
+    return item.a;
+  })
+  console.log(arrMap1, arr)
+  
+  // var fn = function (a) {
+  //   // console.log('fn')
+  //   return a;
+  // }
+  // var fn=()=>{
+  //   // console.log(123)
+  //   return 'fn';
+  // }
+  // var fn=(b)=> {
+  //   return b;
+  // }
+  // function fn() {
+  //   console.log('fn')
+  // }
+  // console.log(fn(456))
+  var array1 = [1, 4, 9, 16];
+
+  // Pass a function to map
+  var map1 = array1.map(x=>x*2);
+  var map2 = array1.map(x => {
+    return x*2;
+  });
+
+  console.log(map2);
+  var isBelowThreshold = (currentValue) => currentValue < 30;
+  var array1 = [1, 30, 39, 39, 10, 13];
+  var array11 = [1, 10, 39, 29, 10, 13];
+  console.log(array1.every(isBelowThreshold));
+
+  var everyS = array1.every(function (item){
+    return item<30;
+  })
+  var everyS2 = array1.some(item=>{
+    console.log(item)
+    return item===399;
+  })
+  console.log(everyS2)
+  // console.log(array11.indexOf(10))
+  // var elements = ['Fire'];
+  //
+  // console.log(elements.join());
+  // console.log(elements.join('|'));
+  var arraySort = [1, 30, 4, 21, 100000];
+  arraySort.sort((a,b) => {
+    return b-a;
+  });
+  console.log(arraySort);
+  var o1 = {
+    a: '123',
+    b: ['123'],
+    c: true,
+  }
+  console.log(o1)
+  console.log(Object.keys(o1))
+  console.log(Object.values(o1))
+  console.log(Object.entries(o1))
+  Object.keys(o1).forEach(item => {
+    console.log(o1[item])
+  })
+  Object.entries(o1).forEach(item => {
+    console.log(item[0], item[1])
+  })
+  var str = 'kjhouu'
+  console.log(str.length)
+  var p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+  console.log(p.replace('dog', 'monkey'));
+  console.log(p.replaceAll('dog', 'monkey'));
+</script>
+</html>
