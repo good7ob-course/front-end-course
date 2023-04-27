@@ -8,6 +8,17 @@
   - link 引入css,rel,href
 - body
   - div 占一行，块标签
+  - h1~h6 块标签
+  - article 写文章
+  - audio
+  - dl dt dd 块标签，列表标签
+  - ul li 块标签，列表标签
+  - ol li 块标签，有序列表标签
+  - footer 页脚
+  - header 导航
+  - p 文章段落
+  - table
+  - canvas
   - a 行标签 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a
     - href
   - span 行标签
