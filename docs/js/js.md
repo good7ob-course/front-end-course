@@ -88,6 +88,13 @@ var name = '前端'
 - setSeconds()
 #### 1.2.5 Math
 - Math.PI 常量(永远不会变的数字)，表示一个圆的周长与直径的比例，约为 3.14159：
+- Math.abs(x) 函数返回一个数字的绝对值。
+- Math.ceil(x) 向上取整
+- Math.floor(x) 向下取整
+- Math.round(x) 四舍五入
+- Math.random() 返回一个随机数
+- Math.max() 函数返回作为输入参数的最大数字，如果没有参数，则返回 -Infinity
+- Math.min()
 
 #### 1.2.3 function
 - function calc(){}
