@@ -28,3 +28,24 @@
 3. 执行 pnpm i
 4. 启动服务 npm start 
 5. 打开 http://localhost:3000
+## 课表
+1. 认识web
+2. html标签初识
+3. css文本属性
+4. 背景属性
+5. css盒模型
+6. css选择器
+7. css定位
+8. css伪类
+9. js变量
+10. js获取dom方式
+11. 数组的方法
+12. this讲解
+13. 变量类型
+14. 运算符和流程控制
+15. xhr
+16. 对象方法和Math
+17. html语义化标签
+18. es6 变量
+19. es6 箭头函数，扩展运算符等
+20. promise
