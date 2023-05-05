@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伪类选择器讲解</title>
+  <style>
+    p {
+      font-weight: bold;
+    }
+
+    li:first-child {
+      border: 2px solid orange;
+    }
+    li:last-child {
+      border: 2px solid black;
+    }
+    .a1 div:nth-child(2){
+      color: red;
+    }
+    .a1 div:nth-of-type(2){
+      font-size: 20px;
+    }
+    .list .item{
+      border-bottom: 1px solid black;
+    }
+    .list .item.no-boder{
+      border-bottom: none
+    }
+    /*.list .item:last-child{*/
+    /*  border-bottom: none;*/
+    /*}*/
+
+  </style>
+</head>
+<body>
+<p>NBA players with most championships:</p>
+<ul>
+  <li>Bill Russell</li>
+  <li>Sam Jones</li>
+  <li>Tom Heinsohn</li>
+  <li>K. C. Jones</li>
+  <li>Satch Sanders</li>
+  <li>John Havlicek</li>
+  <li>Jim Loscutoff</li>
+  <li>Frank Ramsey</li>
+  <li>Robert Horry</li>
+</ul>
+<div class="a1">
+  <span>span</span>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <span>span last</span>
+</div>
+<div class="list">
+  <div class="item">111</div>
+  <div class="item">111</div>
+  <div class="item">111</div>
+  <div class="item">111</div>
+  <div class="item no-boder">111</div>
+</div>
+</body>
+</html>
