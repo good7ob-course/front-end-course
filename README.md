@@ -22,6 +22,7 @@
 - 点击编辑器右上角的拉取
 ## 资源
 - https://www.iconfont.cn/
+- [es6](https://es6.ruanyifeng.com/#docs/intro)
 ## 启动server
 1. 进入server 文件夹
 2. 执行 npm i -g pnpm

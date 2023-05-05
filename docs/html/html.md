@@ -17,7 +17,7 @@
   - footer 页脚
   - header 导航
   - p 文章段落
-  - table
+  - table,tbody,tfoot,thead,th,tr,td
   - canvas
   - a 行标签 https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a
     - href
@@ -26,10 +26,13 @@
   - img 行内块标签, src alt
   - input value,placeholder
     - type: button,checkbox,radio,text默认
+  - textarea
   - button ,disabled
   - select配合option
   - form
     - label 和 id 配合可以在内部高亮表单元素
+  - audio
+  - video
 ### 2.1
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ## 3.css
@@ -53,6 +56,7 @@
 - position
   - absolute 如果没有设置宽高，会导致元素宽高变成内容撑开,他会根据最近的一个非static 元素来定位
   - relative 相对定位,相对于自己定位
+  - fixed 定位,相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。
 - transform
   - translateY translateX translate 相对于本身的一个偏移，可以写百分比，像素px
 - cursor
@@ -71,6 +75,43 @@
   - hover hover某个元素，让其他的元素产生作用
 ### 3.3 id
 > id 不能重复，只能是唯一的
+> 
+### 3.4 tag标签选择器
+### 3.5 伪类选择器
+- :first-child
+- :last-child
+- :nth-child
+- :nth-of-type
+### css3
+- transform transform-origin(改变偏移转化的顶点)
+  - rotate deg单位
+  - scale
+  - skew
+- animation
+  - animation-name
+  - animation-duration
+  - animation-delay
+  - animation-timing-function
+  - animation-direction
+  - animation-iteration-count
+- linear-gradient linear-gradient(to bottom,#e66465, #9198e5);
+- 媒体查询
+  - @media (min-width: 980px)
+  - <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+- 移动端单位 px,rem,em,vh,vw
+  - px
+  - rem 相对于根节点html的大小
+  - em 相对于父级的大小
+  - vh 视口宽度的 1%。
+  - vw 视口高度的 1%。
+### flex
+- justify-content
+  - center 水平居中，start,end
+- align-items
+  - center 垂直居中,start,end
+- flex-direction
+  - row 默认横向排列
+  - column 
 ## 4.行块区别
 1. 块标签可以设置宽高，行内不可以
 ## 5
