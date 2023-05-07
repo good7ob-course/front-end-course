@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>promise</title>
+</head>
+<body>
+
+<!--<script>-->
+<!--  // 告诉我1秒钟之后你的请求执行完毕-->
+<!--  function myPro(){-->
+<!--    return new Promise((resolve, reject) => {-->
+<!--      setTimeout(() => {-->
+<!--        // resolve(12333)-->
+<!--        reject('err 111')-->
+<!--      }, 1000);-->
+<!--    });-->
+<!--  }-->
+<!--  function myProErr(){-->
+<!--    return new Promise((resolve, reject) => {-->
+<!--      setTimeout(() => {-->
+<!--        resolve({code:200,data: {1:0}})-->
+<!--      }, 1000);-->
+<!--    });-->
+<!--  }-->
+<!--  function promiseStudy(){-->
+<!--    myPro().then(() => {-->
+<!--      console.log(1)-->
+<!--      return myPro();-->
+<!--    }).then(() => {-->
+<!--      console.log(2)-->
+<!--      return myPro();-->
+<!--    }).then(() => {-->
+<!--      console.log(3)-->
+<!--    })-->
+
+<!--    // setTimeout(() => {-->
+<!--    //   console.log(1)-->
+<!--    //   setTimeout(() => {-->
+<!--    //     console.log(2)-->
+<!--    //     setTimeout(() => {-->
+<!--    //       console.log(3)-->
+<!--    //       setTimeout(() => {-->
+<!--    //         console.log(4)-->
+<!--    //         setTimeout(() => {-->
+<!--    //           console.log(5)-->
+<!--    //         }, 1000)-->
+<!--    //       }, 1000)-->
+<!--    //     }, 1000)-->
+<!--    //   }, 1000)-->
+<!--    // }, 1000)-->
+<!--  }-->
+<!--  // promiseStudy()-->
+<!--  async function promiseStudy2(){-->
+<!--    try {-->
+<!--      const res = await myPro()-->
+<!--      console.log(1, res)-->
+<!--    } catch (error) {-->
+<!--      console.log(error)-->
+<!--    }finally {-->
+<!--      console.log('finally')-->
+<!--    }-->
+<!--    await myPro()-->
+<!--    console.log(2)-->
+<!--    await myPro()-->
+<!--    console.log(3)-->
+<!--  }-->
+<!--  promiseStudy2()-->
+<!--  myProErr().then((res) => {-->
+<!--    console.log('success',res)-->
+<!--  }).catch(() => {-->
+<!--    console.log('error')-->
+<!--  }).finally(() => {-->
+<!--    console.log('finally')-->
+<!--  })-->
+<!--  -->
+<!--</script>-->
+<script>
+  function test1(){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(1)
+      }, 1000);
+    });
+  }
+  function test2(){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(2)
+      }, 2000);
+    });
+  }
+  function test3(){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(3)
+      }, 3000);
+    });
+  }
+  // Promise.all([test1(), test2(), test3()]).then((res) => {
+  //   console.log('success', res)
+  // }).catch((err) => {
+  //   console.log('err', err)
+  // })
+  Promise.race([test1(), test2(), test3()]).then((res) => {
+    console.log('success', res)
+  }).catch((err) => {
+    console.log('err', err)
+  })
+</script>
+</body>
+</html>

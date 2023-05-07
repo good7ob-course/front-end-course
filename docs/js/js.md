@@ -13,7 +13,7 @@ var name = '前端'
 - let 只能定义一次
 ### 1.2 变量类型
 > 不能用 保留字或者关键字 作为变量名
-- string number boolean array object
+- string number boolean array object symbol(表示独一无二的值) bigInt(一种解决数字大小的限制的数据类型)
   - 字符串拼接
 - 判断变量类型
   - typeof 运算符返回一个字符串，表示操作数的类型
@@ -96,6 +96,11 @@ var name = '前端'
 - Math.max() 函数返回作为输入参数的最大数字，如果没有参数，则返回 -Infinity
 - Math.min()
 
+#### 1.2.6 Number
+- isNaN
+- isSafeInteger 安全整数范围为 -(2^53 - 1) 到 2^53 - 1 之间的整数，包含 -(2^53 - 1) 和 2^53 - 1
+- parseInt
+- toFixed() 方法保留几位小数，四舍五入
 #### 1.2.3 function
 - function calc(){}
 - var calc = function(){} 函数表达式
@@ -159,3 +164,5 @@ var name = '前端'
 - nginx
 - node 服务
 - cors header('Access-Control-Allow-Origin', '*')
+## 4. setTimeout setInterval
+- clearTimeout clearInterval
