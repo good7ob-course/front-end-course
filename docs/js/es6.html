@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>es6</title>
+</head>
+<body>
+<h1></h1>
+<div id="em"></div>
+<script>
+  let a1 = 1;
+  let a2 = 2;
+  let a3 = '2';
+  // let [a,b,c,d] = [1,2,3,4];
+  // let a = 1;
+  // let b = 2;
+  // let c = 3;
+  // let d = 4;
+  let [a=1,...rest] = [22,2,3,4];
+  console.log(a)
+  console.log(rest)
+  function test(a1 = 1,...rest){
+    console.log(a1)
+  }
+  test(11,2,3)
+  // let { foo, bar, foo1= 111 } = { foo: 'aaa', bar: 'bbb' };
+  let { foo } = { foo: 'aaa', bar: 'bbb' };
+  let { foo: foo1 } = { foo: 'aaa1', bar: 'bbb' };
+  // let { bar, ...rest1 } = { foo: 'aaa', bar: 'bbb', a1: 123 };
+  console.log(foo)
+  console.log(foo1)
+  function add([x, y]){
+    // var x = arr[0]
+    // var y = arr[1]
+    // const [x, y] = arr
+    return x + y;
+  }
+
+  console.log(add([1, 2])); // 3
+
+  function move({x = 1,y} = {}) {
+    // const x = obj.x
+    // const y = obj.y
+    // const {x,y} = obj
+    return [x, y];
+  }
+
+  console.log(move({x: 3, y: 8}))
+  console.log(move())
+  let basket = {
+    count: 222,
+    onSale: 3333
+  };
+  let str = 'There are <b>' + basket.count + '</b> ' +
+    'items in ' +
+    'your basket, ' +
+    '<em>' + basket.onSale +
+    '</em> are on sale!';
+  let str1 = `There are <b>${basket.count}</b>
+items in your basket, <em>${basket.onSale}</em>
+ are on sale!`;
+  console.log(str)
+  console.log(str1)
+  document.getElementById('em').innerHTML = str1
+
+  const str2 = 'abcde'
+  console.log(str2.indexOf('c') !== -1)
+  console.log(str2.includes('c')) // babel
+
+  let str3 = 'sdasj32323';
+  let str4 = '453434sdasj32323';
+  console.log(parseInt(str3))
+  console.log(isNaN(parseInt(str3)))
+  console.log(parseInt(str4))
+  console.log(isNaN(parseInt(str4)))
+  let num = 12.2354;
+  console.log(num.toFixed(2))
+
+  const obj1 = {
+    a: {
+      b: 1
+    }
+  }
+  const obj2 = {
+    a: null
+  }
+  const { a: aa } = obj2 || {}
+  const { b } = aa || {}
+  console.log(b)
+  // console.log(obj1?.a?.b)
+
+  let s1 = 0;
+  console.log(s1 ?? 2)
+  let timer2 = setTimeout(() => {
+    console.log(123456)
+  }, 5000)
+  setTimeout(() => {
+    clearTimeout(timer2)
+    timer2 = null
+  }, 1000)
+  // setInterval(()=> {
+  //   console.log(1)
+  // }, 1000)
+  function getCurrentTime() {
+    const mapping = {
+      0: '日',
+      1: '一',
+      2: '二',
+      3: '三',
+      4: '四',
+      5: '五',
+      6: '六',
+    }
+    var date = new Date()
+    var y = date.getFullYear()
+    var m = date.getMonth() + 1
+    var d = date.getDate()
+    var w = date.getDay()
+    var hh = date.getHours()
+    var mm = date.getMinutes()
+    var ss = date.getSeconds()
+    return {
+      y,m,d,hh,mm,ss,w: mapping[w]
+    };
+  }
+
+  function refreshTime(){
+    const {y,m,d,hh,mm,ss,w} = getCurrentTime()
+    if (ss === 59) {
+      clearInterval(timer)
+      timer = null
+    }
+    const strTime = `${y}年${m}月${d}日 ${hh}:${mm}:${ss} 星期${w}`
+    document.getElementsByTagName('h1')[0].innerHTML = strTime
+  }
+  refreshTime()
+  let timer = setInterval(() => {
+    refreshTime()
+  }, 1000)
+  console.log(timer)
+
+</script>
+</body>
+</html>
