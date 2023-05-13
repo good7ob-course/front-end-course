@@ -12,7 +12,7 @@ var name = '前端'
 - const 定义的值不能修改，否则代码报错
 - let 只能定义一次
 ### 1.2 变量类型
-> 不能用 保留字或者关键字 作为变量名
+> 不能用 保留字或者关键字 作为变量名, 引用类型(array object),基本数据类型(string number boolean symbol bigInt)
 - string number boolean array object symbol(表示独一无二的值) bigInt(一种解决数字大小的限制的数据类型)
   - 字符串拼接
 - 判断变量类型
@@ -166,3 +166,37 @@ var name = '前端'
 - cors header('Access-Control-Allow-Origin', '*')
 ## 4. setTimeout setInterval
 - clearTimeout clearInterval
+## 5. history
+- length
+- go
+  - 0 默认，就是刷新
+  - 1 前进1页，2 前进两页，前提是，有跳转历史(length属性)
+  - -1 和1相反
+- back 后退
+## 6. location
+- hostname 域名
+- port 端口
+- protocol 协议
+- href 全部url
+- search 问号后面的值(包括问号)
+- reload
+## 7. 冒泡捕获
+- addEventListener
+  - 第三个参数为false为冒泡，默认也是false 阻止冒泡 stopPropagation
+  - 第三个参数为true为捕获
+## 8. localstorage sessionstorage
+> localstorage 关闭浏览器永远数据都在，除非手动清除。sessionstorage关闭浏览器 数据消失
+- setItem
+- getItem
+- removeItem
+- clear
+## 9. 深浅拷贝
+### 9.1 浅拷贝
+- Object.assign({}, obj)
+- 通过扩展运算符
+### 9.2 深拷贝
+- JSON.parse(JSON.stringify(o1))
+- deepclone
+## 10. 节流防抖
+## 11. 闭包
+如果一个函数返回了一个函数，返回的这个函数上层的变量都属于闭包的变量
